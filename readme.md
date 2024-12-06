@@ -1,6 +1,6 @@
 # The Baddest 💅
 
-# Three.js Journey
+## Projet pour la nuit de l'info 2024
 
 Disponible ici : http://45.155.169.165/
 (Le déploiement des DNS vers le domaine www.bwetterwald.fr est en cours)
