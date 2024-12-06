@@ -14,7 +14,7 @@ import OpenAIClient from './prompt.js'
  * Base
  */
 // Debug
-const gui = new GUI({ width: 325 })
+// const gui = new GUI({ width: 325 })
 const debugObject = {}
 
 const points = [
