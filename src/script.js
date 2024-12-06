@@ -511,7 +511,6 @@ window.addEventListener('click', (event) => {
 
             if (intersects.length > 0) {
                 console.log('Tonneau cliqué !', intersects[0].object);
-                alert('Tonneau cliqué !'); // Action lors du clic sur le tonneau
                 explodeLogo()
 
                 barrel.position.set(Math.random() * 18 - 9, -4, Math.random() * -5)

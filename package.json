@@ -19,6 +19,7 @@
     "openai": "^4.76.0",
     "three": "^0.166.1",
     "three-bvh-csg": "^0.0.16",
-    "three-custom-shader-material": "^5.4.0"
+    "three-custom-shader-material": "^5.4.0",
+    "threejs-journey-exercise": "file:"
   }
 }
