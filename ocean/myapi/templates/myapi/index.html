@@ -1,0 +1,15 @@
+{% load static %} <!-- Load the static template tag -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js with Django</title>
+    <!-- Link the compiled JS file -->
+    <script src="{% static 'myapi/js/assets/app-ApdyXAWF.js' %}" defer></script>
+</head>
+<body>
+    <h1>Three.js Scene</h1>
+    <canvas id="three-canvas"></canvas> <!-- Canvas for rendering the 3D scene -->
+</body>
+</html>
