@@ -289,7 +289,9 @@ renderer.toneMappingExposure = 1
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(sizes.pixelRatio)
 
-const openAIClient = new OpenAIClient("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");
+const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+
+const openAIClient = new OpenAIClient(apiKey);
 
 const cameraMovement = (targetIndex) => {
     let apiRequestSent = false; // Add a flag to prevent multiple requests
