@@ -1,16 +1,16 @@
+# The Baddest 💅
+
 # Three.js Journey
 
-## Setup
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+Disponible ici : http://45.155.169.165/
+(Le déploiement des DNS vers le domaine www.bwetterwald.fr est en cours)
 
-``` bash
-# Install dependencies (only the first time)
-npm install
-
-# Run the local server at localhost:8080
-npm run dev
-
-# Build for production in the dist/ directory
-npm run build
-```
+Avec la participation de :
+- Andoni IPARRAGUIRRE
+- François ROY
+- Geryes DOUMIT
+- Hugues GUIFFARD-FRONDZIAK
+- Matthias ZDRAVKOVIC
+- Peter LIN
+- Thomas KEPPLER
+- Baptiste WETTERWALD
