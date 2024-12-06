@@ -1,0 +1,98 @@
+[
+    {
+        "nom": "Andoni",
+        "caracteristiques": {
+            "lunettes": true,
+            "barbe": true,
+            "tenue_foncee": true,
+            "calvitie": false,
+            "bras_croises": false,
+            "chemise": false,
+            "sourire_bien_marque": false
+        }
+    },
+    {
+        "nom": "Baptiste",
+        "caracteristiques": {
+            "lunettes": true,
+            "barbe": true,
+            "tenue_foncee": false,
+            "calvitie": true,
+            "bras_croises": true,
+            "chemise": true,
+            "sourire_bien_marque": true
+        }
+    },
+    {
+        "nom": "Francois",
+        "caracteristiques": {
+            "lunettes": true,
+            "barbe": false,
+            "tenue_foncee": false,
+            "calvitie": true,
+            "bras_croises": true,
+            "chemise": true,
+            "sourire_bien_marque": false
+        }
+    },
+    {
+        "nom": "Geryes",
+        "caracteristiques": {
+            "lunettes": true,
+            "barbe": true,
+            "tenue_foncee": true,
+            "calvitie": false,
+            "bras_croises": false,
+            "chemise": false,
+            "sourire_bien_marque": false
+        }
+    },
+    {
+        "nom": "Hugues",
+        "caracteristiques": {
+            "lunettes": false,
+            "barbe": true,
+            "tenue_foncee": false,
+            "calvitie": true,
+            "bras_croises": false,
+            "chemise": true,
+            "sourire_bien_marque": false
+        }
+    },
+    {
+        "nom": "Matthias",
+        "caracteristiques": {
+            "lunettes": false,
+            "barbe": false,
+            "tenue_foncee": true,
+            "calvitie": false,
+            "bras_croises": false,
+            "chemise": false,
+            "sourire_bien_marque": false
+        }
+    },
+    {
+        "nom": "Peter",
+        "caracteristiques": {
+            "lunettes": false,
+            "barbe": false,
+            "tenue_foncee": true,
+            "calvitie": false,
+            "bras_croises": false,
+            "chemise": true,
+            "sourire_bien_marque": false
+        }
+    },
+    {
+        "nom": "Thomas",
+        "caracteristiques": {
+            "lunettes": false,
+            "barbe": false,
+            "tenue_foncee": true,
+            "calvitie": false,
+            "bras_croises": false,
+            "chemise": false,
+            "sourire_bien_marque": true
+        }
+    }
+]
