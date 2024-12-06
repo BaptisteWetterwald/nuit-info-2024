@@ -8,6 +8,7 @@ import { SUBTRACTION, Evaluator, Brush } from 'three-bvh-csg'
 import CustomShaderMaterial from 'three-custom-shader-material/vanilla'
 import terrainVertexShader from './shaders/terrain/vertex.glsl'
 import terrainFragmentShader from './shaders/terrain/fragment.glsl'
+import OpenAIClient from './prompt.js'
 
 /**
  * Base
@@ -288,7 +289,14 @@ renderer.toneMappingExposure = 1
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(sizes.pixelRatio)
 
+const openAIClient = new OpenAIClient("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");
+
 const cameraMovement = (targetIndex) => {
+    let apiRequestSent = false; // Add a flag to prevent multiple requests
+
+    const oceanPart = points[targetIndex].element.getAttribute('data-ocean-part');
+    const bodyPart = points[targetIndex].element.getAttribute('data-body-part');
+
     gsap.to(camera.position, { 
         duration: 2, 
         x: points[targetIndex].position.x,
@@ -296,11 +304,38 @@ const cameraMovement = (targetIndex) => {
         z: points[targetIndex].position.z - 2,
 
         ease: "power3.out",
-        onUpdate: function() {
+        onUpdate: async function() {
             if (this.progress() >= 0.5 && !points[targetIndex].element.querySelector('.text').classList.contains('bubble')) {
-                points[targetIndex].element.querySelector('.text').classList.add('bubble')
+                points[targetIndex].element.querySelector('.text').classList.add('bubble');
             }
-        }
+            // Send the prompt at 70% progress, but only once
+
+            if (this.progress() >= 0.7 && !apiRequestSent) {
+                apiRequestSent = true; // Set the flag to prevent multiple requests
+                try {
+                    const prompt = `Explain how the ${bodyPart} in humans is comparable to the ${oceanPart} in the ocean in a few sentences in French up to 30 words.`;
+                    const completion = await openAIClient.getCompletion(prompt);
+
+                    // Update the text element with the response
+                    const textElement = points[targetIndex].element.querySelector('.text');
+                    if (textElement) {
+                        textElement.textContent = completion; // Replace the existing text with the completion response
+                    }
+                } catch (error) {
+                    console.error("Error fetching completion:", error);
+
+                    // Optional: Update the text to show an error message
+                    const textElement = points[targetIndex].element.querySelector('.text');
+                    if (textElement) {
+                        textElement.textContent = "Erreur lors de l'inférence.";
+                    }
+                }
+            }
+        },
+        onComplete: function() {
+            // Reset the flag for the next movement animation if needed
+            apiRequestSent = false;
+        },
     })
 }
 
@@ -360,6 +395,7 @@ points.forEach((point, index) => {
 window.addEventListener('click', (event) => {
         if (event.target === canvas) {
             resetCamera()
+            
             isZoomed = false
         }
     }
