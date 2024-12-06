@@ -521,7 +521,7 @@ window.addEventListener('click', (event) => {
 )
 
 document.getElementById('info-button').addEventListener('click', () => {
-    window.location.href = 'https://example.com'; // Replace this with the desired URL
+    window.location.href = './credit.html'; // Replace this with the desired URL
   })
 
 /**

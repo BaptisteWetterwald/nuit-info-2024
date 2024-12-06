@@ -1,0 +1,24 @@
+h1,
+h2{
+    color : white;
+    text-align : center;
+    width: 100%;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+    transition: opacity 0.5s ease-in-out;
+}
+
+#dev{
+    position:fixed;
+    font-size:5em;
+    top:0.5em;
+}
+
+#title{
+    position:fixed;
+    font-size:3em;
+    color:gainsboro;
+    top: 0.3em
+}
