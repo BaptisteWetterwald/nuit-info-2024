@@ -83,3 +83,50 @@ body
 .point .text.bubble {
     opacity: 1;
 }
+
+.card {
+    position: relative;
+}
+
+.card-img {
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 30px;
+    left: -120px;
+    transform: translateX(-75%) translateY(-50%);
+    max-height: 80px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 100%;
+    background: #00000077;
+    border: 1px solid #ffffff77;
+    z-index: 1;
+}
+
+.point .card-img.bubble {
+    opacity: 1;
+}
+
+#info-button {
+    position: absolute;
+    bottom: 5%; /* Distance from the bottom of the screen */
+    right: 5%; /* Distance from the right of the screen */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Text color */
+    font-size: 18px; /* Text size */
+    border: none;
+    border-radius: 50%; /* Makes it circular */
+    width: 40px; /* Width of the button */
+    height: 40px; /* Height of the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+    z-index: 1000; /* Ensure it stays above the WebGL canvas */
+}
+  
+  #info-button:hover {
+    background-color: #0056b3; /* Change color on hover */
+  }
